@@ -13,18 +13,18 @@ def my():
 
 @app.route("/predict",methods = ["POST", "GET"])
 def home():
-    a = eval(request.form['bedrooms'])
-    b = eval(request.form['bathrooms'])
-    c = eval(request.form['parking'])
-    d = eval(request.form['furnishingstatus'])
+    a = eval(request.form['area'])
+    b = eval(request.form['bedrooms'])
+    c = eval(request.form['bathrooms'])
+    d = eval(request.form['stories'])
     e = eval(request.form['mainroad'])
     f = eval(request.form['guestroom'])
-    g = eval(request.form['airconditioning'])
+    g = eval(request.form['basement'])
     h = eval(request.form['hotwaterheating'])
-    i = eval(request.form['prefarea'])
-    j = eval(request.form['area'])
-    k = eval(request.form['area'])
-    l = eval(request.form['area'])
+    i = eval(request.form['airconditioning'])
+    j = eval(request.form['parking'])
+    k = eval(request.form['prefarea'])
+    l = eval(request.form['furnishingstatus'])
 
 
 
