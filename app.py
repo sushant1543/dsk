@@ -9,34 +9,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression,RidgeClassifier
 from sklearn.linear_model import LinearRegression, Lasso, Ridge
 
-from statsmodels.stats.outliers_influence import variance_inflation_factor
-from sklearn.model_selection import train_test_split, GridSearchCV, RandomizedSearchCV
 
 
-# from sklearn.metrics import confusion_matrix, plot_confusion_matrix, classification_report
-# from sklearn.metrics import precision_score, recall_score, f1_score, accuracy_score
-# from sklearn.metrics import roc_auc_score,roc_curve, precision_recall_curve
-# from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-# from scipy.stats import shapiro, kstest, normaltest, boxcox
-# import statsmodels.api as sm
-# import matplotlib.pyplot as plt
-# import seaborn as sns
-# import plotly.express as px
-
-# from statsmodels.stats.outliers_influence import variance_inflation_factor
-# from scipy.stats import zscore
-
-
-# import warnings
-# warnings.filterwarnings('ignore')
-
-
-# from statsmodels.stats.outliers_influence import variance_inflation_factor
-# from sklearn.model_selection import train_test_split, GridSearchCV, RandomizedSearchCV
-# from sklearn.linear_model import LinearRegression, Lasso, Ridge
-# from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-# from scipy.stats import shapiro, kstest, normaltest, boxcox
-# import statsmodels.api as sm   
 
 model = pickle.load(open('lasso_reg_model.pkl','rb'))
 lasso_reg_model = Lasso(alpha = 4.99)
