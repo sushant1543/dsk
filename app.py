@@ -4,6 +4,8 @@ import pickle
 import pandas as pd    
 
 model = pickle.load(open('lasso_reg_model.pkl','rb'))
+lasso_reg_model = Lasso(alpha = 4.99)
+lasso_reg_model.fit(x_train, y_train)
 
 app = Flask(__name__)
 
