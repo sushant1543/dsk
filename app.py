@@ -24,8 +24,6 @@ def my():
 
 @app.route("/predict",methods = ["POST", "GET"])
 def home():
-    if request.method == 'POST':
-#         data = request.form
     a = eval(request.form['area'])
     b = eval(request.form['bedrooms'])
     c = eval(request.form['bathrooms'])
