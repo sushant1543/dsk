@@ -22,7 +22,7 @@ app = Flask(__name__)
 def my():
     return render_template("home.html" )
 
-@app.route("/predict",methods = ["POST", "GET"])
+@app.route("/predict",methods = ["POST"])  # , "GET"
 def home():
     a = eval(request.form['area'])
     b = eval(request.form['bedrooms'])
