@@ -51,9 +51,7 @@ def home():
 
     test_array = np.array([[a, b, c, d, e, f, g, h, i, j, k, l]])
     predicted_price = model.predict(test_array)
-    
-    predicted_price = np.around(lasso_reg_model.predict([test_array]), 3)[0]
-    print("predicted  price is :", predicted_price)
+
     return render_template('after.html', prediction_text = predicted_price)
 
 
