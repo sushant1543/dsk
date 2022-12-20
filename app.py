@@ -23,7 +23,7 @@ def my():
     return render_template("home.html" )
 
 @app.route("/predict",methods = ["POST"])  # , "GET"
-def home():
+def predict(): # home
     a = eval(request.form['area'])
     b = eval(request.form['bedrooms'])
     c = eval(request.form['bathrooms'])

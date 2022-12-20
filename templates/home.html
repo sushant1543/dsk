@@ -5,7 +5,7 @@
 
         <h1> predict </h1><br>
         
-        <form method="POST", action="{{url_for('home')}}">
+        <form method="POST", action="{{url_for('predict')}}">  #home
           
         <label>area in (m2)     : </label>
         <input style="font-size:15px" type = "number" name = "area" min="1" max="10500" placeholder="enter value" size="30" required>
@@ -28,11 +28,13 @@
         <p> <i>* Fill Values Between 1 to 4 </i></p>
         <br>
 
+
         <label>stories        : </label>
         <input style="font-size:15px" type = "number" name = "stories" min="0" max="4" placeholder="enter value" size="30" required>
         <!-- <h1 style="color:rgb(255, 255, 255);font-size:10px;">Eg: (0 to 5)</h1> -->
         <p> <i>* Fill Values Between 0 to 4 </i></p>
         <br>
+
 
         <label>mainroad         : </label>
         <input style="font-size:15px" type = "number" name = "mainroad" min="0" max="1" placeholder="enter value" size="30" required>
@@ -40,11 +42,13 @@
         <p> <i>* Fill Values Between 0 to 1 </i></p>
         <br>
 
+
         <label>guestroom       : </label>
         <input style="font-size:15px" type = "number" name = "guestroom" min="0" max="1" placeholder="enter value" size="30" required>
         <!-- <h1 style="color:rgb(255, 255, 255);font-size:10px;">Eg: (0 to 5)</h1> -->
         <p> <i>* Fill Values Between 0 to 1 </i></p>
         <br>
+
 
         <label>basement        : </label>
         <input style="font-size:15px" type = "number" name = "basement" min="0" max="1" placeholder="enter value" size="30" required>
@@ -52,11 +56,13 @@
         <p> <i>* Fill Values Between 0 to 1 </i></p>
         <br>
 
+
         <label>hotwaterheating  : </label>
         <input style="font-size:15px" type = "number" name = "hotwaterheating" min="0" max="1" placeholder="enter value" size="30" required>
         <!-- <h1 style="color:rgb(255, 255, 255);font-size:10px;">Eg: (5 to 70)cm</h1> -->
         <p> <i>* Fill Values Between 0 to 1 </i></p>
         <br>
+
 
         <label>airconditioning       : </label>
         <input style="font-size:15px" type = "number" name = "airconditioning" min="0" max="1" placeholder="enter value" size="30" required>
@@ -130,7 +136,7 @@
 
         </style>
         
-        <button style="font-size:20px;vertical-align:middle;font-family:verdana" type="submit" value="Submit" class="button"><span>prediction price </span></button>
+        <button style="font-size:20px;vertical-align:middle;font-family:verdana" type="number" value="Submit" class="button"><span>prediction price </span></button>
 
         <br><br>
 
