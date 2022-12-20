@@ -13,7 +13,7 @@ from sklearn.linear_model import LinearRegression, Lasso, Ridge
 
 
 model = pickle.load(open('lasso_reg_model.pkl','rb'))
-lasso_reg_model = Lasso(alpha = 4.99)
+# lasso_reg_model = Lasso(alpha = 4.99)
 # lasso_reg_model.fit(x_train, y_train)
 
 app = Flask(__name__)
@@ -24,6 +24,8 @@ def my():
 
 @app.route("/predict",methods = ["POST", "GET"])
 def home():
+    if request.method == 'POST':
+#         data = request.form
     a = eval(request.form['area'])
     b = eval(request.form['bedrooms'])
     c = eval(request.form['bathrooms'])
@@ -52,12 +54,16 @@ def home():
     test_array = np.array([[a, b, c, d, e, f, g, h, i, j, k, l]])
     predicted_price = model.predict(test_array)
 
-    return render_template('after.html', prediction_text = predicted_price)
+
+
+# predicted_price = np.around(lasso_reg_model.predict([test_array]), 3)[0]
+    print("predicted  price is :", int(predicted_price))
+
+    return render_template('after.html', data = predicted_price)
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5005)  
-   
+    app.run(host='0.0.0.0', port=5005)   
 
 # @app.route('/predict1')
 # def predict1():
