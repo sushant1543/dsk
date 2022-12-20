@@ -37,10 +37,20 @@ def home():
     k = eval(request.form['prefarea'])
     l = eval(request.form['furnishingstatus'])
 
+# def home():
+#     if request.method == 'POST':
+#         data = request.form
+        
+#         print('data :',data)
 
+#         med_dbs = Diabetes(data)
+#         pred_class = med_dbs.get_predicted_outcome()
+#         print("::::::::::",predicted_price)
+#         print(int(predicted_price))
+#         return render_template('after.html', data=predicted_price)
 
-    arr = np.array([[a, b, c, d, e, f, g, h, i, j, k, l]])
-    predicted_price = model.predict(arr)
+    test_array = np.array([[a, b, c, d, e, f, g, h, i, j, k, l]])
+    predicted_price = model.predict(test_array)
     
     predicted_price = np.around(lasso_reg_model.predict([test_array]), 3)[0]
     print("predicted  price is :", predicted_price)
