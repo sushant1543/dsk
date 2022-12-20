@@ -1,27 +1,111 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- <link rel="icon" href="data:,"> -->
+        <!-- <link rel="shortcut icon" href="#" /> -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            input[type=number], select {
+            width: 20%;
+            padding: 5px 5px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            }
+            body, html {
+              height: 100%;
+              margin: 0;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            * {
+              box-sizing: border-box;
+            }
+            
+            .bg-image {
+              /* The image used */
+              background-image: url("https://pixabay.com/images/id-528678/");
+              
+              /* Add the blur effect */
+              filter: blur(2px);
+              -webkit-filter: blur(2px);
+              
+              /* Full height */
+              height: 100%; 
+              
+              /* Center and scale the image nicely */
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;   
+            }
+            
+            /* Position text in the middle of the page/image */
+            .bg-text {
+              background-color: rgb(0,0,0); /* Fallback color */
+              background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+              color: white;
+              font-weight: bold;
+              border: 3px solid #f1f1f1;
+              position: absolute;
+              top: 60%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 2;
+              width: 80%;
+              padding: 20px;
+              text-align: center;
+            }
+            </style> -->
+    </head>
 
-<body bgcolor=#a3cfb4>
-
-    <center>
-
-        <h1>  pred : predicted_price  </h1>
+    <body TEXT = "WHITE";>
+        <div class="bg-image"></div>
+        <div class="bg-text">
     
-    {%if data == 0%}
-    <h1>pred</h1>  
-     
+ <center>
 
-    {%else%}
-    <h1>predicted_price</h1>
-    
-    
-    {%endif%}
 
+       <h1> Home Price Prediction </h1>
+
+        
         <br><br>
-    <a href='/'>go back to home page</a>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        {%if data == 0%}
+        <h1> <b>("predicted  price is :", predicted_price) </b> </h1><br>  
+    
+    
 
-    </center>
+        {%else%}
+        <h1>  <b>("predicted  price is :", predicted_price) </i> </b><br>
+   
+    
+        {%endif%}
+        
+        <br>
+        <br>
+        <br>
+
+        <a href='/' "font-size: small;">go back to home page</a>
+    <br>
+    <br>
+      <p style = "font-size: small;">© Sushant S Bansode.</p>   
+      
 
 </body>
 
-</html>
+</html> 
+
+
+
+
+
 

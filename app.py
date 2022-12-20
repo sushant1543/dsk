@@ -14,7 +14,7 @@ from sklearn.linear_model import LinearRegression, Lasso, Ridge
 
 model = pickle.load(open('lasso_reg_model.pkl','rb'))
 lasso_reg_model = Lasso(alpha = 4.99)
-lasso_reg_model.fit(x_train, y_train)
+# lasso_reg_model.fit(x_train, y_train)
 
 app = Flask(__name__)
 
@@ -48,7 +48,7 @@ def home():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080, debug=False)   
+    app.run(host='0.0.0.0', port=5005)  
    
 
 # @app.route('/predict1')
